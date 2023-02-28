@@ -3,4 +3,5 @@
 <p>Cuteness: <%= @kitten.cuteness %></p>
 <p>Softness: <%= @kitten.softness %></p>
 
-<%= link_to "Edit Kitten", edit_kitten_path(@kitten) %>
+<%= button_to "Edit Kitten", edit_kitten_path(@kitten), method: :get %>
+<%= button_to "Remove Kitten", kitten_path, method: :delete %>
