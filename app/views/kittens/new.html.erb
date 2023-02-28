@@ -1,0 +1,16 @@
+<% if @kitten.errors.any? %>
+  <div>
+    <h2>
+      <%= plularize(@kitten.errors.count, "error") %> occured while creating your kitten
+    </h2>
+    <ul>
+      <% @kitten.errors.full_messages.each do |msg| %>
+        <li>
+        <%= msg %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= render "form" %>
