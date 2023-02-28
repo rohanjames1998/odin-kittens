@@ -1,7 +1,7 @@
 <% if @kitten.errors.any? %>
   <div>
     <h2>
-      <%= plularize(@kitten.errors.count, "error") %> occured while creating your kitten
+      <%= pluralize(@kitten.errors.count, "error") %> occured while creating your kitten
     </h2>
     <ul>
       <% @kitten.errors.full_messages.each do |msg| %>
