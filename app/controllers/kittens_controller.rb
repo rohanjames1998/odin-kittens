@@ -32,7 +32,7 @@ class KittensController < ApplicationController
     if @kitten.update(kitten_params)
       redirect_to root_url
     else
-      render :new, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 
