@@ -16,7 +16,7 @@ class KittensController < ApplicationController
     @kitten = Kitten.new(kitten_params)
 
     if @kitten.save
-      redirect_to root_url
+      redirect_to root_url, notice: "Kitten Created Successfully!!"
     else
       render :new, status: :unprocessable_entity
     end
@@ -30,7 +30,7 @@ class KittensController < ApplicationController
     @kitten = Kitten.find(params[:id])
 
     if @kitten.update(kitten_params)
-      redirect_to root_url
+      redirect_to root_url, notice: "Kitten Updated Successfully!!"
     else
       render :edit, status: :unprocessable_entity
     end
